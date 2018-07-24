@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         private class NetworkInterceptor : Interceptor {
             override fun intercept(chain: Interceptor.Chain?): okhttp3.Response {
-                return chain!!.proceed(chain.request().newBuilder().header("Authorization", "Bearer 9073b917ff08233fe2da46b6da65fe80df230e65").build())
+                return chain!!.proceed(chain.request().newBuilder().header("Authorization", "Bearer <TOKEN>").build())
             }
         }
 
