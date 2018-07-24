@@ -2,10 +2,13 @@ package tw.holidaybear.graphql.android
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.apollographql.apollo.ApolloCall
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.api.Response
-import com.apollographql.apollo.exception.ApolloException
+import com.apollographql.apollo.rx2.Rx2Apollo
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.observers.DisposableSingleObserver
+import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -16,35 +19,40 @@ import javax.net.ssl.X509TrustManager
 
 class MainActivity : AppCompatActivity() {
 
+    private val disposables = CompositeDisposable()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getIssues()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        disposables.dispose()
+    }
+
     private fun getIssues() {
 
-        val query = RecentQuery.builder()
+        val recentQuery = RecentQuery.builder()
                 .first(2)
                 .query("created:>2018-07-15 sort:stars-desc")
                 .type(SearchType.REPOSITORY)
                 .build()
 
-        apolloClient.query(query).enqueue(object : ApolloCall.Callback<RecentQuery.Data>(){
+        disposables.add(Rx2Apollo.from(apolloClient.query(recentQuery))
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .firstOrError()
+                .subscribeWith(object : DisposableSingleObserver<Response<RecentQuery.Data>>() {
+                    override fun onSuccess(dataResponse: Response<RecentQuery.Data>) {
+                        result.text = dataResponse.data().toString()
+                    }
 
-            override fun onResponse(response: Response<RecentQuery.Data>) {
-                val data = response.data()
-                runOnUiThread {
-                    result.text = data.toString()
-                }
-            }
-
-            override fun onFailure(e: ApolloException) {
-                runOnUiThread {
-                    result.text = e.message
-                }
-            }
-        })
+                    override fun onError(e: Throwable) {
+                        result.text = e.message
+                    }
+                }))
     }
 
     companion object {
@@ -70,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         private class NetworkInterceptor : Interceptor {
             override fun intercept(chain: Interceptor.Chain?): okhttp3.Response {
-                return chain!!.proceed(chain.request().newBuilder().header("Authorization", "Bearer <TOKEN>").build())
+                return chain!!.proceed(chain.request().newBuilder().header("Authorization", "Bearer 9073b917ff08233fe2da46b6da65fe80df230e65").build())
             }
         }
 
