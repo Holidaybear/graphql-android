@@ -1,4 +1,4 @@
-query RecentQuery($first: Int, $query: String!, $type: SearchType!) {
+query TrendQuery($first: Int, $query: String!, $type: SearchType!) {
   search(first: $first, query: $query, type: $type) {
     edges {
       node {

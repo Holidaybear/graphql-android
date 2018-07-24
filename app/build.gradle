@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.apollographql.android'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 28
@@ -21,16 +22,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
+    // Support Library
+    implementation 'com.android.support:design:28.0.0-alpha3'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    // Data Binding
+    kapt 'com.android.databinding:compiler:3.1.3'
+    // Architecture Components (ViewModel)
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    kapt "android.arch.lifecycle:compiler:1.1.1"
+    // Apollo
     implementation 'com.apollographql.apollo:apollo-runtime:1.0.0-alpha'
     implementation 'com.apollographql.apollo:apollo-android-support:1.0.0-alpha'
     implementation 'com.apollographql.apollo:apollo-rx2-support:1.0.0-alpha'
+    // RxJava2
     implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
