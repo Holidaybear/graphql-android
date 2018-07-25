@@ -7,7 +7,7 @@ class MainViewModel : ViewModel() {
 
     private val repository = TrendRepository()
 
-    fun getTrends(): Observable<TrendQuery.Data> {
+    fun getTrends(): Observable<List<Repo>> {
         return repository.getTrends()
     }
 }

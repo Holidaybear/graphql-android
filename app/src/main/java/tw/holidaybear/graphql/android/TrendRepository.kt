@@ -6,13 +6,11 @@ import io.reactivex.Observable
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import tw.holidaybear.graphql.android.type.SearchType
-import java.security.cert.X509Certificate
 import java.util.concurrent.TimeUnit
-import javax.net.ssl.X509TrustManager
 
 class TrendRepository {
 
-    fun getTrends(): Observable<TrendQuery.Data> {
+    fun getTrends(): Observable<List<Repo>> {
 
         val trendQuery = TrendQuery.builder()
                 .first(2)
@@ -21,7 +19,7 @@ class TrendRepository {
                 .build()
 
         return Rx2Apollo.from(apolloClient.query(trendQuery))
-                .map { response -> response.data() }
+                .map { response -> RepoMapper.toRepos(response.data()) }
     }
 
     companion object {
@@ -32,7 +30,6 @@ class TrendRepository {
             OkHttpClient.Builder()
                     .writeTimeout(15, TimeUnit.SECONDS)
                     .readTimeout(15, TimeUnit.SECONDS)
-                    .sslSocketFactory(SSL(trustAllCert), trustAllCert)
                     .addNetworkInterceptor(NetworkInterceptor())
                     .build()
         }
@@ -49,21 +46,6 @@ class TrendRepository {
             override fun intercept(chain: Interceptor.Chain?): okhttp3.Response {
                 return chain!!.proceed(chain.request().newBuilder().header("Authorization", "Bearer <TOKEN>").build())
             }
-        }
-
-        private val trustAllCert = object : X509TrustManager {
-            override fun checkClientTrusted(chain: Array<out X509Certificate>?, authType: String?) {
-
-            }
-
-            override fun checkServerTrusted(chain: Array<out X509Certificate>?, authType: String?) {
-
-            }
-
-            override fun getAcceptedIssuers(): Array<X509Certificate> {
-                return arrayOf()
-            }
-
         }
     }
 }

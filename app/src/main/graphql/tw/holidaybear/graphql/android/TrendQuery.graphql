@@ -13,6 +13,10 @@ query TrendQuery($first: Int, $query: String!, $type: SearchType!) {
           }
           primaryLanguage {
             name
+            color
+          }
+          licenseInfo {
+            name
           }
         }
       }
