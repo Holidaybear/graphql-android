@@ -14,7 +14,8 @@ object RepoMapper {
     }
 
     fun toRepo(node: TrendQuery.AsRepository): Repo {
-        return Repo(node.name,
+        return Repo(node.id,
+                    node.name,
                     node.owner.login,
                     node.description,
                     node.stargazers.totalCount,

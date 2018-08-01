@@ -13,7 +13,7 @@ class TrendRepository {
     fun getTrends(): Observable<List<Repo>> {
 
         val trendQuery = TrendQuery.builder()
-                .first(2)
+                .first(25)
                 .query("created:>2018-07-15 sort:stars-desc")
                 .type(SearchType.REPOSITORY)
                 .build()

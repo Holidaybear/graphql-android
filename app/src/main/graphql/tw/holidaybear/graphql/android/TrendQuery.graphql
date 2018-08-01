@@ -3,6 +3,7 @@ query TrendQuery($first: Int, $query: String!, $type: SearchType!) {
     edges {
       node {
         ... on Repository {
+          id
           name
           owner {
             login
