@@ -10,10 +10,13 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import tw.holidaybear.graphql.android.R
 import tw.holidaybear.graphql.android.databinding.ActivityMainBinding
+import tw.holidaybear.graphql.android.util.Injection
+import tw.holidaybear.graphql.android.util.ViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var viewModelFactory: ViewModelFactory
     private lateinit var viewModel: MainViewModel
     private lateinit var adapter: ReposAdapter
     private val disposables = CompositeDisposable()
@@ -21,7 +24,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModelFactory = Injection.provideViewModelFactory()
+        viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel::class.java)
         adapter = ReposAdapter(mutableListOf())
 
         setSupportActionBar(binding.toolbar)
@@ -35,7 +39,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getRepos() {
-
         disposables.add(viewModel.getTrends()
                 .doOnNext { binding.progress.visibility = View.VISIBLE }
                 .subscribeOn(Schedulers.io())
