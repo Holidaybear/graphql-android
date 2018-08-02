@@ -1,4 +1,4 @@
-package tw.holidaybear.graphql.android
+package tw.holidaybear.graphql.android.repos
 
 import android.arch.lifecycle.ViewModelProviders
 import android.support.v7.app.AppCompatActivity
@@ -10,7 +10,7 @@ import android.widget.ProgressBar
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_main.*
+import tw.holidaybear.graphql.android.R
 
 class MainActivity : AppCompatActivity() {
 

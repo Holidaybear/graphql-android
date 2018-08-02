@@ -1,4 +1,4 @@
-package tw.holidaybear.graphql.android
+package tw.holidaybear.graphql.android.binding
 
 import android.annotation.SuppressLint
 import android.databinding.BindingAdapter

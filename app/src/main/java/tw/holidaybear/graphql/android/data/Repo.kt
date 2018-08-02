@@ -1,4 +1,4 @@
-package tw.holidaybear.graphql.android
+package tw.holidaybear.graphql.android.data
 
 data class Repo(
         val id: String,

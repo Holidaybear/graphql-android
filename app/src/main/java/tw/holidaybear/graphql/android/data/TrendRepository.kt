@@ -1,10 +1,11 @@
-package tw.holidaybear.graphql.android
+package tw.holidaybear.graphql.android.data
 
 import com.apollographql.apollo.ApolloClient
 import com.apollographql.apollo.rx2.Rx2Apollo
 import io.reactivex.Observable
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import tw.holidaybear.graphql.android.TrendQuery
 import tw.holidaybear.graphql.android.type.SearchType
 import java.util.concurrent.TimeUnit
 

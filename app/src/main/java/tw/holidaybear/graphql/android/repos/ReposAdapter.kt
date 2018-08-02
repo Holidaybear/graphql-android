@@ -1,9 +1,10 @@
-package tw.holidaybear.graphql.android
+package tw.holidaybear.graphql.android.repos
 
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import tw.holidaybear.graphql.android.data.Repo
 import tw.holidaybear.graphql.android.databinding.ItemRepoBinding
 import java.util.*
 
