@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         adapter = ReposAdapter(mutableListOf())
 
         setSupportActionBar(binding.toolbar)
+        binding.vm = viewModel
         binding.recyclerview.adapter = adapter
         getRepos()
     }
@@ -42,9 +43,6 @@ class MainActivity : AppCompatActivity() {
         disposables.add(viewModel.getTrends()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .doOnSubscribe { binding.progress.visibility = View.VISIBLE }
-                .subscribe {
-                    binding.progress.visibility = View.GONE
-                    adapter.swapItems(it) })
+                .subscribe { adapter.swapItems(it) })
     }
 }
