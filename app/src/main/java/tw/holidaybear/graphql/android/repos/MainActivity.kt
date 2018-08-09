@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun getRepos() {
         disposables.add(viewModel.getTrends()
-                .doOnNext { binding.progress.visibility = View.VISIBLE }
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .doOnSubscribe { binding.progress.visibility = View.VISIBLE }
                 .subscribe {
                     binding.progress.visibility = View.GONE
                     adapter.swapItems(it) })
