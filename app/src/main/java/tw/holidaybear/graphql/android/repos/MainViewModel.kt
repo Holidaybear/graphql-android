@@ -2,7 +2,7 @@ package tw.holidaybear.graphql.android.repos
 
 import android.arch.lifecycle.ViewModel
 import android.databinding.ObservableBoolean
-import io.reactivex.Observable
+import io.reactivex.Single
 import tw.holidaybear.graphql.android.data.Repo
 import tw.holidaybear.graphql.android.data.TrendRepository
 
@@ -10,10 +10,10 @@ class MainViewModel(private val repository: TrendRepository) : ViewModel() {
 
     val loading = ObservableBoolean(false)
 
-    fun getTrends(): Observable<List<Repo>> {
-        return repository.getTrends()
+    fun getRepos(): Single<List<Repo>> {
+        return repository.getRepos()
                 .doOnSubscribe { startLoad() }
-                .doOnTerminate { stopLoad() }
+                .doAfterTerminate { stopLoad() }
     }
 
     private fun startLoad() = loading.set(true)

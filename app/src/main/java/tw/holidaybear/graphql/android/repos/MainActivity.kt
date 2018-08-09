@@ -4,7 +4,6 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
@@ -40,9 +39,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getRepos() {
-        disposables.add(viewModel.getTrends()
+        disposables.add(viewModel.getRepos()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe { adapter.swapItems(it) })
+                .subscribe( { adapter.swapItems(it) },
+                        { /* TODO: error handling */ }))
     }
 }

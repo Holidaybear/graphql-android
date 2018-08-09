@@ -30,7 +30,7 @@ object Injection {
     }
 
     fun provideTrendRepository(apolloClient: ApolloClient): TrendRepository {
-        return TrendRepository(apolloClient)
+        return TrendRepository.newInstance(apolloClient)
     }
 
     fun provideViewModelFactory(): ViewModelFactory {
