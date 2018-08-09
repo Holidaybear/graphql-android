@@ -1,0 +1,628 @@
+{
+  "data": {
+    "search": {
+      "__typename": "SearchResultItemConnection",
+      "edges": [
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NTUxMTY=",
+            "name": "filament",
+            "owner": {
+              "__typename": "Organization",
+              "login": "google"
+            },
+            "description": "Filament is a physically based rendering engine for Android, Windows, Linux and macOS",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 3204
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "C++",
+              "color": "#f34b7d"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "Apache License 2.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM4MDgwNDg=",
+            "name": "sclack",
+            "owner": {
+              "__typename": "User",
+              "login": "haskellcamargo"
+            },
+            "description": "The best CLI client for Slack, because everything is terrible!",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 933
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "GNU General Public License v3.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0MjQ3NjA=",
+            "name": "DifferenceKit",
+            "owner": {
+              "__typename": "User",
+              "login": "ra1028"
+            },
+            "description": "💻 A fast and flexible O(n) difference algorithm framework for Swift collection.",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 317
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Swift",
+              "color": "#ffac45"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM3Nzk1NjA=",
+            "name": "mauerwerk",
+            "owner": {
+              "__typename": "User",
+              "login": "drcmda"
+            },
+            "description": "⚒  A react-spring driven masonry-like grid with enter/exit and shared element transitions",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 289
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0OTI0OTI=",
+            "name": "stt-benchmark",
+            "owner": {
+              "__typename": "Organization",
+              "login": "Picovoice"
+            },
+            "description": "speech-to-text benchmark framework",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 267
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "Apache License 2.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NzIxMjQ=",
+            "name": "effective-java-3e-source-code",
+            "owner": {
+              "__typename": "User",
+              "login": "jbloch"
+            },
+            "description": "The source code from the third edition of Effective Java, with minor additions as necessary to make it runnable.",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 261
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Java",
+              "color": "#b07219"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM2MTM4NDc=",
+            "name": "gushici",
+            "owner": {
+              "__typename": "User",
+              "login": "xenv"
+            },
+            "description": "一言·古诗词 API (Hitokoto API)，随机返回一条古诗词名句。采用  Vert.x + Redis 全异步开发，毫秒级稳定响应。",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 223
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Java",
+              "color": "#b07219"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "GNU General Public License v3.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM2MzI5MTA=",
+            "name": "dumper.js",
+            "owner": {
+              "__typename": "User",
+              "login": "zeeshanu"
+            },
+            "description": "A better and pretty variable inspector for your Node.js applications",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 206
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDMzNzM3MTI=",
+            "name": "learn-machine-learning-in-two-months",
+            "owner": {
+              "__typename": "User",
+              "login": "bangoc123"
+            },
+            "description": "Những kiến thức cần thiết để học tốt Machine Learning trong vòng 2 tháng. Essential Knowledge for learning Machine Learning in two months.",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 188
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Jupyter Notebook",
+              "color": "#DA5B0B"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM1NjM5MTE=",
+            "name": "proxy_requests",
+            "owner": {
+              "__typename": "User",
+              "login": "rootVIII"
+            },
+            "description": "a class that uses scraped proxies to make an http GET/POST request (Python requests)",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 183
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM1NjIxOTg=",
+            "name": "Imagvue",
+            "owner": {
+              "__typename": "User",
+              "login": "runkids"
+            },
+            "description": ":rice_scene:  Imagvue is an image component for Vue.js",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 183
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "JavaScript",
+              "color": "#f1e05a"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM3MTYzNTA=",
+            "name": "Bashark",
+            "owner": {
+              "__typename": "User",
+              "login": "TheSecondSun"
+            },
+            "description": "Bash post exploitation toolkit",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 150
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Shell",
+              "color": "#89e051"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NzQxNTU=",
+            "name": "FlowLayout",
+            "owner": {
+              "__typename": "User",
+              "login": "eonist"
+            },
+            "description": "Bi-directional layout framework for iOS",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 140
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Swift",
+              "color": "#ffac45"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM1OTY1NDM=",
+            "name": "code-blue",
+            "owner": {
+              "__typename": "User",
+              "login": "sujan-s"
+            },
+            "description": "A carefully concocted dark theme made of subtle blues and bright hues that’s easy on the eyes for focused coding.",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 123
+            },
+            "primaryLanguage": null,
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM4MzQ3Njg=",
+            "name": "Source-SnapChat",
+            "owner": {
+              "__typename": "User",
+              "login": "4jy"
+            },
+            "description": "Source Code for SnapChat",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 119
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Objective-C",
+              "color": "#438eff"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDMzNjUwNTA=",
+            "name": "CornerNet",
+            "owner": {
+              "__typename": "Organization",
+              "login": "umich-vl"
+            },
+            "description": null,
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 117
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "BSD 3-Clause \"New\" or \"Revised\" License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NDcyNzU=",
+            "name": "FUPK3",
+            "owner": {
+              "__typename": "User",
+              "login": "F8LEFT"
+            },
+            "description": "演示视频https://pan.baidu.com/s/1HH_-TQGca1NLoSqzvOPB3Q 密码：izm3",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 100
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "C++",
+              "color": "#f34b7d"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "GNU General Public License v3.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0MzYyNzc=",
+            "name": "BaikalDB",
+            "owner": {
+              "__typename": "Organization",
+              "login": "baidu"
+            },
+            "description": "BaikalDB, a HTAP database.",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 100
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "C++",
+              "color": "#f34b7d"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "Apache License 2.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NTc1MDQ=",
+            "name": "NALU",
+            "owner": {
+              "__typename": "User",
+              "login": "kgrm"
+            },
+            "description": "Keras Implementation of: \"Neural Arithmetic Logic Units\", Trask et al., ArXiV, 2018",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 97
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM2OTMxNzQ=",
+            "name": "tencentcloud-sdk-dotnet",
+            "owner": {
+              "__typename": "Organization",
+              "login": "TencentCloud"
+            },
+            "description": "Tencent Cloud API 3.0 SDK for .NET",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 95
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "C#",
+              "color": "#178600"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "Apache License 2.0"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0ODQyMzg=",
+            "name": "NALU-pytorch",
+            "owner": {
+              "__typename": "User",
+              "login": "kevinzakka"
+            },
+            "description": "A PyTorch Implementation of \"Neural Arithmetic Logic Units\"",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 94
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM1MzM4MDI=",
+            "name": "jelbrekTime",
+            "owner": {
+              "__typename": "User",
+              "login": "tihmstar"
+            },
+            "description": "An developer jailbreak for Apple watch S3 watchOS 4.1",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 93
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Objective-C",
+              "color": "#438eff"
+            },
+            "licenseInfo": null
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM2MTU0Mzg=",
+            "name": "100-Days-Of-ML-Code",
+            "owner": {
+              "__typename": "Organization",
+              "login": "MachineLearning100"
+            },
+            "description": "100-Days-Of-ML-Code中文版",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 82
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Jupyter Notebook",
+              "color": "#DA5B0B"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "MIT License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM5ODc1NTA=",
+            "name": "gobeansdb",
+            "owner": {
+              "__typename": "Organization",
+              "login": "douban"
+            },
+            "description": "Distributed object storage server from Douban Inc. ",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 82
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Go",
+              "color": "#375eab"
+            },
+            "licenseInfo": {
+              "__typename": "License",
+              "name": "BSD 3-Clause \"New\" or \"Revised\" License"
+            }
+          }
+        },
+        {
+          "__typename": "SearchResultItemEdge",
+          "node": {
+            "__typename": "Repository",
+            "id": "MDEwOlJlcG9zaXRvcnkxNDM0NjA4MzU=",
+            "name": "Node_JS_Machine_Learning",
+            "owner": {
+              "__typename": "User",
+              "login": "llSourcell"
+            },
+            "description": "This is the code for \"Node JS Machine Learning\" By Siraj Raval on Youtube",
+            "stargazers": {
+              "__typename": "StargazerConnection",
+              "totalCount": 79
+            },
+            "primaryLanguage": {
+              "__typename": "Language",
+              "name": "Python",
+              "color": "#3572A5"
+            },
+            "licenseInfo": null
+          }
+        }
+      ]
+    }
+  }
+}
